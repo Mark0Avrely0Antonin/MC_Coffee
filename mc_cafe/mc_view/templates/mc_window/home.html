@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block title %}Главное!{% endblock %}
+
+{% block content %} 
+
+<div class="container mt-3 text-warning mc_container text-center">
+  <div class="row">
+    <div class="col-12">
+       <h2 id='h2_03' class='text-dark fw-bold'>Главное!</h2>
+       <p id='h2_03' class='fw-bold text-dark'>МакКафе - это часть мировой ресторанной сети Макдональдс, но при этом функционирует как отдельный бренд. Формат позиционируется как уникальный концепт современных кофеен. В меню МакКафе можно заказать не только кофе и напитки, но и внушительный ассортимент десертов. Цель, при создания кофеен, заключалась в том, чтобы дать покупателям более современный уровень обслуживания. МакКафе сочетает в себе домашнюю атмосферу, скоростное обслуживание и вкусные блюда. В настоящее время данный формат имеет большой успех у поклонников Макдональдс.</p>
+       <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img id='mc_image_coffee' src="\static\mc_images\MC coffee 2.jpg" alt="">
+            </div>
+            <div class="carousel-item">
+              <img id='mc_image_coffee' src="\static\mc_images\MC Coffee.jpg" alt="">
+            </div>
+            <div class="carousel-item">
+              <img id='mc_image_coffee' src="\static\mc_images\MC Coffee 3.jpg" alt="">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+         </button>
+        </div>
+        <p id='h2_03' class="text-dark fw-bold">Тут можно посмотреть все виды Мак Кофе!</p>
+        <h4 id="h2_03" class="text-dark fw-bold">Эспрессо</h4>
+        <p id='h2_03' class="text-dark fw-bold">Напиток подается в двух вариантах. Первый – стандартный, содержит 7 г кофейных зерен. Второй – доппио, двойной эспрессо. Соответственно он состоит из 14 г зерен, предварительно смолотых. Фильтры для воды, которые есть в каждом заведении Макдональдс позволяют раскрывать вкус и аромат напитка, очищая от негативных компонентов воды. На базе стандартного эспрессо готовится американо. Отличается лишь большим объемом.</p>
+        <h4 id="h2_03" class="text-dark fw-bold">Латте</h4>
+        <p id='h2_03' class="text-dark fw-bold">Для латте используют натуральные и свежесмолотые зерна, молоко с высоким процентом жирности и сахар. Готовый одинарный эспрессо объединяется с подогретым молоком. Все функции выполняются автоматически. Каждая чашка латте имеет одинаковую калорийность – 125 калорий.</p>
+        <h4 id="h2_03" class="text-dark fw-bold">Капучино</h4>
+        <p id='h2_03' class="text-dark fw-bold">Напиток готовится за считанные минуты в кофемашине. Пока варится стандартный эспрессо, молоко взбивается. Процесс объединения компонентов происходит без помощи персонала – автоматически.</p>
+        <h4 id="h2_03" class="text-dark fw-bold">Фраппучино</h4>
+        <p id='h2_03' class="text-dark fw-bold">Есть несколько напитков кофе с молоком которые всегда подаются холодными, главный компонент лед. Это фраппучино, мокко макдональдс и фраппе карамель. Подаются с различными наполнителями.  Основой для этих напитков является, как и прежде свежеприготовленный эспрессо. 3-4 кубика льда взбивается миксером, образовывая ледяную крошку. Напитки получаются с высокой пенкой. Карамель и шоколад можно добавлять отдельно.</p>
+        <h4 id="h2_03" class="text-dark fw-bold">Гляссе</h4>
+        <p id='h2_03' class="text-dark fw-bold">Этот вид кофе из Макдональдс скорее является десертом. Состоит из черного кофе и мороженного. Этот напиток родом из Франции. Ингредиенты каждый посетитель может выбирать самостоятельно.</p>
+        <hr id='hr_02'>
+        <p id='h2_03' class="text-dark fw-bold">И не только!Так же тут есть дилекатесы, напитки, коктейли!</p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

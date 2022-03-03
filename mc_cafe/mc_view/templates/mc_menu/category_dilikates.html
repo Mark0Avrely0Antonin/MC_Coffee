@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block title %} Категория: {{ category_dilikates.title }}!{% endblock %}
+
+{% block content %} 
+
+<div class="container  mt-3 text-warning mc_container text-center">
+    <div class="row">
+        <h2 id='h2_03' class='text-dark fw-bold'>{{ category_dilikates.title }}!</h2>
+        <div class="col col-3 mt-5 col-md-3 col-lg-3 col-sm-3">
+            <div id='list_group' class="list-group">
+                {% for item in categories_dilikates %}
+                <a id='list_item' href="{% url 'category_dilikates' item.pk %}" class="text-warning list-group-item list-group-item-action active" aria-current="true">{{ item.title }}</a>
+                {% endfor %}
+                <a id='list_item' href="{% url 'dilikates' %}" class="text-warning mt-3 list-group-item list-group-item-action active" aria-current="true">Назад</a>
+            </div>
+            <br>
+        </div>
+        {% for item in dilikates  %}
+        <div class="col col-6 mt-3 col-md-6 col-lg-4 col-sm-6">
+            <div class="card" style="width: 20rem; ">
+                <div class="card-header">
+                  <h3>{{ item.card_header }}</h3>
+                </div>
+                <img src="{{ item.card_image.url }}" alt=""
+                     width="400" height="350" class="card-img-top">
+                <div class="card-body">
+                    <p>{{ item.card_body|truncatewords:30 }}</p>
+                    <a  href="{{ item.get_absolute_url }}" type="button" id='button_cofe' class="btn btn-outline-success">Узнать побольше</a>
+                </div>
+                <div class="card-footer">
+                    <h5>{{ item.card_footer }}</h5>
+                </div>
+            </div>
+            <br>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% endblock %}

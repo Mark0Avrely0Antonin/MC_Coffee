@@ -1,0 +1,75 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+
+    <!-- CSS -->
+    <link href="{% static 'css/mc_style.css' %}" rel="stylesheet">
+    <!-- CSS -->
+
+    <!--ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous"/>
+    <!--ICONS -->
+
+
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body class="">
+    <nav class="navbar  navbar-expand-lg navbar-dark bg-warning">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <em id='icon_coffee' class="fa fa-coffee text-dark"></em>
+                <span id='word_mc' class="text-dark">МАК Кофе!</span>
+            </a>
+            <button class="navbar-toggler text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon text-dark"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item co2 active text-uppercase fw-bold">
+                        <a class="nav-link fw-bold text-dark" href="{% url 'coffee' %}">Кофе<a></li>
+                    </li>
+                    <li class="nav-item co2 text-uppercase fw-bold">
+                        <a class="nav-link fw-bold text-dark" href="{% url 'dilikates' %}">Диликатесы</a>
+                    </li>
+                </ul>
+                {% if not request.user.is_authenticated %}
+                <div class="text-uppercase fw-bold">
+                    <a class="fw-bold text-dark" href="{% url 'register' %}">Регистрация</a> | <a class="fw-bold text-dark" href="{% url 'login' %}">Вход</a> 
+                </div>
+                {% endif %}
+                {% if request.user.is_authenticated %}
+                 <div class="text-uppercase fw-bold">
+                    <a id='login' class="fw-bold text-dark" href="{% url 'logout' %}">Выход</a> 
+                 </div>
+                 <br>
+                 <div class="btn-group one1 circle">
+                    <a class="navbar-brand" href="#">
+                       <em id='icon_user' class='far fa-user'></em>
+                    </a>
+                </div>
+                <a href="#" class="navbar-brand" id='username'>
+                    <span id='name'>{{ user.username }}</span>
+                </a>  
+                {% endif %}       
+            </div>
+        </div>
+    </nav>
+{% block content %} {% endblock %}
+
+
+<!-- Bootstrap JS -->
+<script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+<!-- Bootstrap JS -->
+
+</body>
+</html>

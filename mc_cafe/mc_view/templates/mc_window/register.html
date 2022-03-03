@@ -1,0 +1,92 @@
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block title %}Регистрация!{% endblock %}
+
+{% block content %} 
+
+<div class="container mt-3 text-warning mc_container">
+    <div class="row">
+        <div class="col">
+          <h2 id='h2_03' class='text-dark fw-bold text-center'>Регистрация!</h2>
+           {% if messages %}
+             {% for message in messages %}
+               {% if message.tags == 'success'%}  
+                 <div class="alert alert-success" role='alert'>
+                    {{ message }}
+                 </div>
+               {% endif %}
+               {% if message.tags == 'error'%}
+                 <div class="alert alert-danger" role='alert'>
+                    {{ message }}  
+                  </div>
+               {% endif %}
+             {% endfor%} 
+           {% endif %}  
+          <form action="" enctype='multipart/form-data' method='post'>
+              {% csrf_token %} 
+             <div class="con">
+                {{ form.non_field.errors }}
+               <div class="mb-3" style='width: 600px;'>
+                  <label for="{{ form.username.id_for_label }}" class="form-label"><span class='fw-bold p'>Имя пользователя: </span></label>
+                  <div class="form-group">
+                     {{ form.username }}
+                  </div>
+                  <div class="invalid-feedback">
+                      {{ form.username.errors }}
+                  </div>
+                </div>
+                <hr class='hr23'>
+                <div class="mb-3" style='width: 500px'>
+                    <label for="{{ form.email.id_for_label }}"  class="form-label"><span class='fw-bold p'>Адрес электронной почты: </span></label>
+                 <div class="form-group">
+                    {{ form.email }}
+                 </div>
+                 <div class="invalid-feedback">
+                    {{ form.email.errors }}
+                 </div>
+                </div>
+                <hr class='hr23'>
+                <div class="mb-3" style='width: 400px'>
+                  <label for="{{ form.password1.id_for_label }}" class="form-label"><span class="fw-bold p">Пароль: </span></label>
+                  <div class="form-group">
+                     {{ form.password1 }}
+                  </div>
+                  <div class="invalid-feedback">
+                     {{ form.password1.errors }}
+                  </div>
+               </div>
+               <hr class='hr23'>
+               <div class="mb-3" style='width: 400px'>
+                  <label for="{{ form.password2.id_for_label }}" class="form-label"><span class="fw-bold p">Подтверждение пароля: </span></label>
+                 <div class="form-group">
+                    {{ form.password2 }}
+                 </div>
+                 <div class="invalid-feedback">
+                    {{ form.password.errors }}
+                 </div>
+                </div>
+                <button type='submit' class="btn btn-outline-warning btn-block" id='button_cofe2'>Зарегистрироваться</button>
+                <br>
+                <br>
+              </div>
+              <br>
+              <br>
+              </div>
+          </form>
+          <br>
+          <br>
+         <br>
+          {% comment %} <form method='post'>
+           
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form> {% endcomment %}
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,201 @@
+
+
+
+#icon_coffee  {
+  font-size: 35px;
+}
+
+body {
+  background-image: url(../mc_images/MC_CAFE.png);
+  background-attachment: fixed;
+  margin-right: 60px;
+  width: 100%;
+  height: 100%;
+}
+
+#word_mc {
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.navbar-toggler {
+  background-color: #1F1D1D;
+}
+
+.mc_container{
+  border: 2px solid #fff;
+  background-color: #FBB103;
+}
+
+#mc_image_coffee {
+  border: 2px solid black;
+  width: 900px;
+  height: 400px;
+}
+
+#hr_02 {
+  border: 1px solid black;
+  background-color: black;
+}
+
+#h2_03 {
+  font-family: cursive;
+}
+
+
+
+.card {
+  background-color: #1F1D1D;
+  border: 1px solid #1F1D1D;
+  font-family: cursive;
+}
+
+.con {
+  background-color: #1F1D1D;
+  border: 1px solid #1F1D1D;
+  font-family: cursive;
+}
+
+
+.card-header {
+  background-color: #191616;
+}
+
+.card-footer {
+  background-color: #191616;
+}
+
+#button_cofe:hover {
+  opacity: .80;
+  font-weight: bold;
+  transform: scale(1.1);
+}
+
+#button_cofe2:hover {
+  opacity: .80;
+  font-weight: bold;
+  transform: scale(1.1);
+  margin-left: 30px;
+}
+
+#button_cofe2 {
+  margin-left: 30px;
+}
+
+#list_group {
+  margin-top: 50px;
+}
+
+#list_item {
+  background-color: #1F1D1D;
+  border: 1px solid #fff;
+  font-weight: bold;
+
+}
+
+#list_item:hover {
+  background-color: #fff;
+  
+}
+
+#list_group2 {
+  margin-top: 50px;
+}
+
+#list_item2 {
+  background-color: #1F1D1D;
+  border: 1px solid #fff;
+  font-weight: bold;
+
+}
+
+#list_item2:hover {
+  background-color: #fff;
+  
+}
+
+
+.view_image_coffee {
+  border: 1px solid #fff;
+}
+
+#con2-2 {
+  margin-left: 160px;
+}
+
+#con3-3 {
+  text-align: center;
+}
+
+#icon_user {
+  font-size: 35px;
+  padding-right: 5px;
+}
+
+.circle {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  border: 1px solid #000;
+  background-color: #191616;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin-right: 100px;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+
+.one1 {
+  margin-right: 25px;
+  padding-left: 25px;
+}
+
+#username {
+  margin-left: 5px;
+  margin-right: 55px;
+}
+
+#login {
+  margin-right: 15px;
+}
+
+#name {
+  color: #191616;
+  font-family: cursive;
+  font-weight: bold;
+}
+
+#form_col {
+  background-color: #000000;
+}
+
+.c3 {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.82);
+}
+
+.form-group {
+  height:40px;
+  margin: 10px 10px 10px 0;
+  margin-top: 10px;
+  margin-left: 35px;
+  font-size: 18px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.82));
+}
+
+.form-group:hover {
+  border: 2px solid #FBB103;
+  transform: translateX(15px);
+}
+
+.hr23 {
+  border: none;
+  background-color: #fff;
+  color: #fff;
+  height: 3px;
+}
